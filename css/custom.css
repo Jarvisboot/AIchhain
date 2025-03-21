@@ -1,0 +1,26 @@
+.left-menu-category_icon {
+    /* margin-left: 15px; */
+    font-size: 40px !important;
+    background-image: linear-gradient(90deg, rgb(27, 176, 253) 0%, rgb(27, 176, 253) 35%, rgb(155, 252, 206) 100%) !important;
+    background-clip: text;
+    color: transparent !important;
+}
+
+.box {
+    background-color: #fff;
+    border: 1px solid #000;
+    flex: 1 0 calc(16.666% - 20px);
+    max-width: calc(16.666% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.box img {
+    height: 80%;
+    object-fit: contain;
+    opacity: 1 !important;
+}
