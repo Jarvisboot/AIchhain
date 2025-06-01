@@ -1,1319 +1,644 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-style-mode" content="0"> <!-- 0 == light, 1 == dark -->
-
-    <title>AI Chhain - Your Gateway to Endless Creativity and Simplified Solutions in Decentralized AI 🤖</title>
-
-    <!-- Favicon -->
-<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-<!-- CSS ============================================ -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="https://ai-pin.io/assets/css/plugins/fontawesome-all.min.css?v=1742524225"> -->
-<link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="css/animation.css">
-<link rel="stylesheet" href="css/feature.css">
-<link rel="stylesheet" href="css/magnify.min.css">
-<link rel="stylesheet" href="css/slick.css">
-<link rel="stylesheet" href="css/slick-theme.css">
-<link rel="stylesheet" href="css/lightbox.css">
-<link rel="stylesheet" href="css/bootstrap-select.min.css">
-
-<link rel="stylesheet" href="css/prism.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/custom.css"></head>
-
-<body class="active-light-mode">
-
-    <main class="page-wrapper">
-        <div id="my_switcher" class="my_switcher">
-    <ul>
-        <li>
-            <a href="javascript: void(0);" data-theme="light" class="setColor light">
-                <img src="images/sun-01.svg" alt="Sun images"><span title="Light Mode">
-                    Light</span>
-            </a>
-        </li>
-        <li>
-            <a href="javascript: void(0);" data-theme="dark" class="setColor dark">
-                <img src="images/vector.svg" alt="Vector Images"><span title="Dark Mode">
-                    Dark</span>
-            </a>
-        </li>
-    </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aichhain — Decentralized AI Solutions on Solana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3B82F6',secondary:'#FF2E63'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Exo 2', sans-serif;
+background-color: #0F172A;
+color: #F8FAFC;
+}
+.heading {
+font-family: 'Orbitron', sans-serif;
+}
+.glassmorphism {
+background: rgba(15, 23, 42, 0.7);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.neon-glow {
+box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+transition: all 0.3s ease;
+}
+.neon-glow:hover {
+box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+}
+.feature-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+.gradient-bg {
+background: linear-gradient(135deg, #2A0944 0%, #0F172A 100%);
+}
+.gradient-text {
+background: linear-gradient(90deg, #3B82F6, #FF2E63);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.grid-pattern {
+background-image:
+linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+background-size: 20px 20px;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=futuristic%20cyberpunk%20digital%20landscape%20with%20neural%20network%20visualization%2C%20deep%20purple%20and%20electric%20blue%20color%20scheme%2C%20abstract%20technology%20concept%20with%20particles%20and%20grid%20lines%2C%20perfect%20for%20website%20hero%20background%2C%20high%20quality%20digital%20art&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #1E293B;
+transition: .4s;
+border-radius: 24px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 16px;
+width: 16px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #3B82F6;
+}
+input:checked + .slider:before {
+transform: translateX(26px);
+}
+.tech-scroll {
+animation: scroll 30s linear infinite;
+}
+@keyframes scroll {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
+}
+</style>
+</head>
+<body>
+<!-- Header/Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 glassmorphism">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-40 h-10 flex items-center mr-10">
+<span class="font-['Arial'] text-2xl text-white">AICCHAIN</span>
 </div>
-        <!-- Start Header Area  -->
-        <header class="rainbow-header header-default header-not-transparent header-sticky">
-    <div class="container position-relative">
-        <div class="row align-items-center row--0">
-            <div class="col-lg-3 col-md-6 col-6">
-                <div class="logo">
-                    <a href="https://ai-pin.io/">
-                        <img class="logo-light" src="images/aipin-logo.png" alt="AI-Pin Logo">
-                        <img class="logo-dark" src="images/aipin-logo.png" alt="Corporate Logo">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-6 col-6 position-static">
-                <div class="header-right">
-
-                    <nav class="mainmenu-nav d-none d-lg-block">
-                        <ul class="mainmenu">
-                            <li><a href="https://aichhain.com/">Home</a></li>
-                            <li><a href="https://solscan.io/token/7ey8VBSgpjiiu1HZS8uV8ofmaM2FScAPtfkpZ1xThczm">Solscan</a></li>
-                            <!--<li><a href="#">Airdrops</a></li>-->
-                            <li><a href="https://aichhain-organization.gitbook.io/https-www.aichhain.com/" target="_blank">Whitepaper</a></li>
-
-                                                            <li><a href="https://dexscreener.com/solana/vWVAPXGL51ECmqKzZaF5ccmgFK5GBhvMucNsEFM56wS">DexScreener</a></li>
-                                                        </ul>
-                    </nav>
-
-                    <!-- Start Header Btn  -->
-                                            <div class="header-btn">
-                            <a class="btn-default btn-small round" href="javascript:void(0)" id="walletLoginButton">Connect Wallet</a>
-                        </div>
-                                            <!-- End Header Btn  -->
-
-                    <!-- 
-                    <div class="mainmenu-nav d-none d-lg-block one-menu">
-                        <ul class="mainmenu one-menu-item">
-                            <li class="with-megamenu has-menu-child-item position-relative menu-item-open">
-                                <a class="header-round-btn" href="#">
-                                    <span><i class="feather-grid"></i></span>
-                                </a>
-                                <div class="rainbow-megamenu with-mega-item-2 right-align">
-                                    <div class="wrapper">
-                                        <div class="row row--0">
-                                            <!--  
-                                            <div class="col-lg-4 single-mega-item">
-                                                <div class="genarator-section">
-                                                    <ul class="genarator-card-group full-width-list">
-                                                        <li>
-                                                            <a href="#" class="genarator-card center-align bg-flashlight-static center-align" tabindex="-1">
-                                                                <div class="inner bottom-flashlight">
-                                                                    <div class="left-align">
-                                                                        <div class="img-bar">
-                                                                            <!-- <img src="https://ai-pin.io/assets/images/generator-icon/document_line.png"
-                                                                                alt="AI Generator"> -->
-                                                                             <!--<i class="fas fa-file left-menu-category_icon"></i>
-                                                                        </div>
-                                                                        <h5 class="title">Agent IQ</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 single-mega-item">
-                                                <div class="genarator-section">
-                                                    <ul class="genarator-card-group full-width-list">
-                                                        <li>
-                                                            <a href="#" class="genarator-card center-align bg-flashlight-static center-align" tabindex="-1">
-                                                                <div class="inner bottom-flashlight">
-                                                                    <div class="left-align">
-                                                                        <div class="img-bar">
-                                                                            <!-- <img src="https://ai-pin.io/assets/images/generator-icon/document_line.png"
-                                                                                alt="AI Generator"> -->
-                                                                             <!--<i class="fas fa-file-image left-menu-category_icon"></i>
-                                                                        </div>
-                                                                        <h5 class="title">Vision IQ</h5>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                                                                            <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fab fa-btc left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">CryptoPulse</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                            <span class="rainbow-badge-card">Hot</span>
-                                                                                                                                        </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fas fa-hand-holding-usd left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">StockSage</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                            <span class="rainbow-badge-card">Hot</span>
-                                                                                                                                        </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fa fa-microphone left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">Speech to Text</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                            <span class="rainbow-badge-card">Hot</span>
-                                                                                                                                        </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="far fa-comment-dots left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">Chat Bot</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                            <span class="rainbow-badge-card">Hot</span>
-                                                                                                                                        </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fa fa-envelope left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">Email Generator</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                    </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fa fa-volume-up left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">Text To Speech</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                    </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fa fa-image left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">Image Generator</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                    </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fa fa-music left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">Lyrics Generator</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                            <span class="rainbow-badge-card">Hot</span>
-                                                                                                                                        </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fas fa-stopwatch left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">FitTrack</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                    </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                                <div class="col-lg-4 single-mega-item">
-                                                    <div class="genarator-section">
-                                                        <ul class="genarator-card-group full-width-list">
-                                                            <li>
-                                                                <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                                                    <div class="inner bottom-flashlight">
-                                                                        <div class="left-align">
-                                                                            <div class="img-bar">
-                                                                                                                                                                    <i class="fas fa-globe-americas left-menu-category_icon"></i>
-                                                                                                                                                                </div>
-                                                                            <h5 class="title">TripMaster</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                                                                                    </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div> -->
-
-                    <!-- Start admin Area  -->
-                                        <!-- Start admin Area  -->
-
-                    <!-- Start Mobile-Menu-Bar -->
-                    <div class="mobile-menu-bar ml--5 d-block d-lg-none">
-                        <div class="hamberger">
-                            <button class="hamberger-button">
-                                <i class="feather-menu"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- Start Mobile-Menu-Bar -->
-                </div>
-            </div>
-        </div>
-    </div>
+<nav class="hidden md:flex space-x-8">
+<a href="https://readdy.ai/home/dab0cdc7-19a5-4d77-9b11-dbd56c687144/782097ff-9b91-40b0-80df-f4dedd9a8d75" data-readdy="true" class="text-gray-300 hover:text-primary transition-colors font-medium">Products</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors font-medium">Solutions</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors font-medium">Developers</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors font-medium">About</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors font-medium">Whitepaper</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="relative hidden md:block">
+<button id="languageSelector" class="flex items-center text-sm text-gray-300 hover:text-white">
+<span>EN</span>
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</button>
+<div id="languageDropdown" class="absolute right-0 mt-2 w-32 bg-gray-800 rounded shadow-lg hidden">
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">English</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">中文</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">日本語</a>
+<a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">한국어</a>
+</div>
+</div>
+<label class="switch">
+<input type="checkbox" id="themeToggle">
+<span class="slider"></span>
+</label>
+<button class="bg-primary text-white px-5 py-2 !rounded-button neon-glow whitespace-nowrap">Connect Wallet</button>
+<button class="md:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuButton">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="md:hidden hidden pt-4 pb-2">
+<nav class="flex flex-col space-y-4">
+<a href="https://readdy.ai/home/dab0cdc7-19a5-4d77-9b11-dbd56c687144/782097ff-9b91-40b0-80df-f4dedd9a8d75" data-readdy="true" class="text-gray-300 hover:text-primary transition-colors">Products</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">Solutions</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">Developers</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">About</a>
+<a href="#" class="text-gray-300 hover:text-primary transition-colors">Community</a>
+<div class="flex items-center">
+<span class="text-gray-400 mr-2">Language:</span>
+<select class="bg-gray-800 text-gray-300 border-none rounded pr-8">
+<option>English</option>
+<option>中文</option>
+<option>日本語</option>
+<option>한국어</option>
+</select>
+</div>
+</nav>
+</div>
+</div>
 </header>
-
-<input type="hidden" id="ok1" style="display: none;" value="c2stYVllNFJlbWFMUERRaXdXanRobQ==">
-<input type="hidden" id="ok2" style="display: none;" value="NVQzQmxia0ZKUUR4bE83N3BxeXJBU1A1SVBpSGs=">
-<input type="hidden" id="gk" style="display: none;" value="QUl6YVN5QzNobWhReHJ5RlN4cklWY21TNFdFOFl1WE5mYWRqREs4">        <!-- End Header Area  -->
-
-        <div class="popup-mobile-menu">
-    <div class="inner-popup">
-        <div class="header-top">
-            <div class="logo">
-                <a href="index.html">
-                    <img class="logo-light" src="images/aipin-logo.png" alt="AI-Pin Logo">
-                    <img class="logo-dark" src="images/aipin-logo.png" alt="Corporate Logo">
-                </a>
-            </div>
-            <div class="close-menu">
-                <button class="close-button">
-                    <i class="feather-x"></i>
-                </button>
-            </div>
-        </div>
-
-        <div class="content">
-            <ul class="mainmenu">
-                <li><a href="https://aichhain.com/">Home</a></li>
-                <li><a href="https://solscan.io/token/7ey8VBSgpjiiu1HZS8uV8ofmaM2FScAPtfkpZ1xThczm">Solscan</a></li>
-                <!--<li><a href="#">Airdrops</a></li>-->
-                <li><a href="https://aichhain-organization.gitbook.io/https-www.aichhain.com/" target="_blank">Whitepaper</a></li>
-
-                                    <li><a href="https://dexscreener.com/solana/vWVAPXGL51ECmqKzZaF5ccmgFK5GBhvMucNsEFM56wS">DexScreener</a></li>
-                                </ul>
-
-        </div>
-                    <div class="rbt-sm-separator"></div>
-
-            <div class="header-btn d-block d-md-none">
-                <a class="btn-default @@btnClass" id="walletLoginButton" href="javascript:void(0)">Connect Wallet</a>
-            </div>
-            
-    </div>
+<!-- Hero Section -->
+<section class="hero-bg relative min-h-screen flex items-center pt-20">
+<div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/90 to-transparent"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<h1 class="heading text-5xl md:text-6xl font-bold mb-4 leading-tight">
+Decentralized <span class="gradient-text">AI Solutions</span> on Solana
+</h1>
+<p class="text-xl md:text-2xl text-gray-300 mb-8">
+Unleash the power of artificial intelligence with blockchain security.
+Build, deploy, and scale AI models in a decentralized ecosystem.
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-white px-8 py-3 !rounded-button neon-glow font-medium text-lg whitespace-nowrap">
+Get Started
+</button>
+<button class="border border-white/20 bg-white/5 backdrop-blur-sm text-white px-8 py-3 !rounded-button font-medium text-lg hover:bg-white/10 transition-colors whitespace-nowrap">
+Learn More
+</button>
 </div>
-        <!-- Imroz Preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-        </div>
-
-        <!-- Start Slider Area  -->
-        <div class="slider-area slider-style-1 variation-default slider-bg-image bg-banner1" data-black-overlay="1">
-            <!-- <div class="bg-blend-top bg_dot-mask"></div> -->
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <div class="inner text-center mt--60">
-                            <h1 class="title display-one">
-                                Want to understand how this revolution unfolds? Dive into our whitepaper <span class="theme-gradient">Decentralized AI</span> 🤖
-                            </h1>
-                            <p class="b1 desc-text">AI Agents, Autonomous Bots, and Decentralized Innovation
-                                <br>Leading the Future of Content Creation, Personalization, and Workflow Optimization.
-                            </p>
-                            <div class="button-group">
-                                <a class="btn-default bg-light-gradient btn-large"href="https://dexscreener.com/solana/vWVAPXGL51ECmqKzZaF5ccmgFK5GBhvMucNsEFM56wS">
-                                    <div class="has-bg-light"></div>
-                                    <span>Buy AiChhain</span>
-                                </a>
-                            </div>
-                            <p class="color-gray mt--5">💳 E-mail support@aichhain.com </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-10 col-xl-10 order-1 order-lg-2">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DrNcXgoFv20?si=-XE_PTHpA4Sbs0zY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                    <span><i class="feather-play"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="chatenai-separator has-position-bottom">
-                <img class="w-100 separator-dark" src="images/separator-top.svg" alt="separator">
-                <img class="w-100 separator-light" src="images/separator-top_1.svg" alt="separator">
-            </div>
-        </div>
-        <!-- End Slider Area  -->
-
-        <!-- Start Service__Style--1 Area  -->
-        <div class="rainbow-service-area rainbow-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                            <h4 class="subtitle">
-                                <span class="theme-gradient">AIgnite</span>
-                            </h4>
-                            <h2 class="title w-600 mb--20">Revolutionizing AI with Autonomous Agents & Decentralized
-                                Intelligence</h2>
-                            <p class="description b1">Empowering Real-Time Insights, Effortless Content Creation, and
-                                Tailored Conversational Bots for Every Need</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row row--15 service-wrapper">
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--1 bg-color-blackest radius mt--25 text-center rbt-border-none variation-4 bg-flashlight">
-                            <div class="icon">
-                                <i class="feather-loader"></i>
-                            </div>
-                            <div class="content">
-                                <h4 class="title w-600">
-                                    <a href="#">Autonomous AI Agents</a>
-                                </h4>
-                                <p class="description b1 color-gray mb--0">Our AI agents work independently to handle
-                                    tasks, saving you time and effort. Let them take care of the details for you.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                        <div class="service service__style--1 bg-color-blackest radius mt--25 text-center rbt-border-none variation-4 bg-flashlight">
-                            <div class="icon">
-                                <i class="feather-cast"></i>
-                            </div>
-                            <div class="content">
-                                <h4 class="title w-600">
-                                    <a href="#">Conversational AI</a>
-                                </h4>
-                                <p class="description b1 color-gray mb--0">AI that enables natural, human-like
-                                    conversations in chatbots or voice assistants for seamless user interaction.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                        <div class="service service__style--1 bg-color-blackest radius mt--25 text-center rbt-border-none variation-4 bg-flashlight">
-                            <div class="icon">
-                                <i class="feather-codepen"></i>
-                            </div>
-                            <div class="content">
-                                <h4 class="title w-600">
-                                    <a href="#">Decentralized AI Bots</a>
-                                </h4>
-                                <p class="description b1 color-gray mb--0">Harness the power of decentralized AI.
-                                    Secure, transparent, and efficient bots working across networks for smarter
-                                    solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700">
-                        <div class="service service__style--1 bg-color-blackest radius mt--25 text-center rbt-border-none variation-4 bg-flashlight">
-                            <div class="icon">
-                                <i class="feather-activity"></i>
-                            </div>
-                            <div class="content">
-                                <h4 class="title w-600">
-                                    <a href="#">Effortless Content AI</a>
-                                </h4>
-                                <p class="description b1 color-gray mb--0">Let our AI-powered service take the hard
-                                    work out of content creation. Get started today with AI.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
-                        <div class="service service__style--1 bg-color-blackest radius mt--25 text-center rbt-border-none variation-4 bg-flashlight">
-                            <div class="icon">
-                                <i class="feather-terminal"></i>
-                            </div>
-                            <div class="content">
-                                <h4 class="title w-600">
-                                    <a href="#">Generative AI</a>
-                                </h4>
-                                <p class="description b1 color-gray mb--0">Unlock creativity with AI that generates
-                                    text, images, and more, helping you bring ideas to life with minimal effort.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
-                        <div class="service service__style--1 bg-color-blackest radius mt--25 text-center rbt-border-none variation-4 bg-flashlight">
-                            <div class="icon">
-                                <i class="feather-map"></i>
-                            </div>
-                            <div class="content">
-                                <h4 class="title w-600">
-                                    <a href="#">Real-Time AI Insights</a>
-                                </h4>
-                                <p class="description b1 color-gray mb--0">Get instant data analysis and insights,
-                                    powered by AI, to make smarter decisions on the fly.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-                </div>
-            </div>
-        </div>
-        <!-- End Service__Style--1 Area  -->
-
-        <!-- Start Seperator Area  -->
-        <!-- <div class="chatenai-separator">
-            <img class="w-100 separator-dark" src="https://ai-pin.io/assets/images/separator/separator-top.svg" alt="separator">
-            <img class="w-100 separator-light" src="https://ai-pin.io/assets/images/light/separator/separator-top.svg" alt="separator">
-        </div> -->
-        <!-- End Seperator Area  -->
-
-        <!-- Start Timeline-Style-Four  -->
-        <div class="rainbow-timeline-area rainbow-section-gap" style="display: none">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                            <h4 class="subtitle ">
-                                <span class="theme-gradient">HOW IT WORKS</span>
-                            </h4>
-                            <h2 class="title w-600 mb--20">Guide Our AI to Create Your Copy</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1 mt--30">
-                        <div class="timeline-style-two bg-flashlight bg-color-blackest">
-                            <div class="row row--0">
-                                <div class="col-lg-4 col-md-4 rainbow-timeline-single dark-line">
-                                    <div class="rainbow-timeline">
-                                        <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">1.Select template</h6>
-                                        <div class="progress-line">
-                                            <div class="line-inner"></div>
-                                        </div>
-                                        <div class="progress-dot">
-                                            <div class="dot-level">
-                                                <div class="dot-inner"></div>
-                                            </div>
-                                        </div>
-                                        <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Easily Select Templates for Website Content.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 rainbow-timeline-single dark-line">
-                                    <div class="rainbow-timeline">
-                                        <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">2.Describe topic</h6>
-                                        <div class="progress-line">
-                                            <div class="line-inner"></div>
-                                        </div>
-                                        <div class="progress-dot">
-                                            <div class="dot-level">
-                                                <div class="dot-inner"></div>
-                                            </div>
-                                        </div>
-                                        <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">All Feature available features in Essentials.</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 rainbow-timeline-single dark-line">
-                                    <div class="rainbow-timeline">
-                                        <h6 class="title" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">3.Generate content</h6>
-                                        <div class="progress-line">
-                                            <div class="line-inner"></div>
-                                        </div>
-                                        <div class="progress-dot">
-                                            <div class="dot-level">
-                                                <div class="dot-inner"></div>
-                                            </div>
-                                        </div>
-                                        <p class="description" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">Popular Feature available features in Essentials.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-10 col-xl-10 order-1 order-lg-2">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/DrNcXgoFv20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                           </div>
-                                </span> See action in video</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Timeline-Style-Four  -->
-
-        <!-- Start Seperator Area  -->
-        <div class="chatenai-separator">
-            <img class="w-100 separator-dark" src="images/separator-bottom.svg" alt="separator">
-            <img class="w-100 separator-light" src="images/separator-bottom_1.svg" alt="separator">
-        </div>
-        <!-- End Seperator Area  -->
-
-
-        <!-- Start Split Style-1 Area  -->
-        <div class="rainbow-split-area rainbow-section-gap" style="display:none">
-            <div class="container">
-                <div class="rainbow-splite-style">
-                    <div class="split-wrapper">
-                        <div class="row g-0 radius-10 align-items-center">
-                            <div class="col-lg-12 col-xl-6 col-12">
-                                <div class="thumbnail">
-                                    <img class="radius" src="images/split-8.png" alt="split Images">
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-xl-6 col-12">
-                                <div class="split-inner">
-                                    <h4 class="title" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">
-                                        Instant Content with AI</h4>
-                                    <p class="description" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Unlock Conversion-Driven Content: Business Bios,
-                                        Facebook Ads, Product Descriptions, Emails, Landing Pages, Social Ads, and
-                                        Beyond.</p>
-                                    <ul class="split-list" data-sal="slide-up" data-sal-duration="400" data-sal-delay="350">
-                                        <li>- Craft Articles in Under 20 Seconds.</li>
-                                        <li>- Reclaim Hundreds of Valuable Hours with AI</li>
-                                        <li>- Elevate Copywriting with Rewriter.</li>
-                                    </ul>
-                                    <div class="view-more-button mt--35" data-sal="slide-up" data-sal-duration="400" data-sal-delay="400">
-                                        <a class="btn-default" href="#">Contact With Us</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Split Style-1 Area  -->
-
-        <!-- Start Seperator Area  -->
-        <div class="chatenai-separator">
-            <img class="w-100 separator-dark" src="images/separator-top.svg" alt="separator">
-            <img class="w-100 separator-light" src="images/separator-top_1.svg" alt="separator">
-        </div>
-        <!-- End Seperator Area  -->
-         
-        <!-- Start Brands Area -->
-        <!--<div class="rainbow-brand-area rainbow-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                            <h4 class="subtitle "><span class="theme-gradient">Exchange</span></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mt--10">
-                        <ul class="brand-list brand-style-2" id="imageWrapper1">
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- End Brands Area -->
-
-        <!-- Start Seperator Area  -->
-        <div class="chatenai-separator">
-            <img class="w-100 separator-dark" src="images/separator-top.svg" alt="separator">
-            <img class="w-100 separator-light" src="images/separator-top_1.svg" alt="separator">
-        </div>
-        <!-- End Seperator Area  -->
-
-
-        <!-- Start Brands Area -->
-       <!-- <div class="rainbow-brand-area rainbow-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center sal-animate" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                            <h4 class="subtitle "><span class="theme-gradient">Media Coverage</span></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 mt--10">
-                        <ul class="brand-list brand-style-2" id="imageWrapper">
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <!-- End Brands Area -->
-
-        <!-- Start Seperator Area  -->
-        <!--<div class="chatenai-separator">
-            <img class="w-100 separator-dark" src="images/separator-top.svg" alt="separator">
-            <img class="w-100 separator-light" src="images/separator-top_1.svg" alt="separator">
-        </div>-->
-        <!-- End Seperator Area  -->
-
-        <!-- Start Call TO Action Area  -->
-        <div class="rainbow-callto-action-area">
-            <div class="wrapper">
-                <div class="rainbow-callto-action clltoaction-style-default rainbow-section-gap">
-                    <div class="container">
-                        <div class="row row--0">
-                            <div class="col-lg-12">
-                                <div class="align-items-center content-wrapper">
-                                    <div class="inner">
-                                        <div class="content text-center">
-                                            <span class="theme-gradient b2 mb--30 d-inline-block">Bring Intelligent
-                                                Conversations to Your Domain</span>
-                                            <h2 class="title" data-sal="slide-up" data-sal-duration="400" data-sal-delay="200">Your Brand, Our AI – Fully White-Labeled Solutions
-                                            </h2>
-                                            <p class="description" data-sal="slide-up" data-sal-duration="400" data-sal-delay="300">Unlock the power of AI chatbots customized entirely
-                                                for your brand. Seamlessly integrate our advanced, conversational AI
-                                                under your own domain, offering clients and users a personalized
-                                                experience powered by cutting-edge technology.
-                                            </p>
-                                            <div class="call-to-btn" data-sal="slide-up" data-sal-duration="400" data-sal-delay="350">
-                                                <a class="btn-default bg-light-gradient btn-large" href="https://chat.aichhain.com">
-                                                    <div class="has-bg-light"></div>
-                                                    <span>Join Waiting List?</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="fancy-genearate-section">
-                    <div class="container">
-                        <div class="genarator-section">
-                            <ul class="genarator-card-group full-width-list">
-                                                                    <li>
-                                        <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                            <div class="inner">
-                                                <div class="left-align">
-                                                    <div class="img-bar">
-                                                                                                                    <i class="fab fa-btc left-menu-category_icon"></i>
-                                                                                                                </div>
-                                                    <h5 class="title">CryptoPulse</h5>
-                                                    <span class="rainbow-demo-btn">Try It Now Free</span>
-                                                                                                            <span class="rainbow-badge-card ml--10">Hot</span>
-                                                                                                        </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                                                        <li>
-                                        <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                            <div class="inner">
-                                                <div class="left-align">
-                                                    <div class="img-bar">
-                                                                                                                    <i class="fas fa-hand-holding-usd left-menu-category_icon"></i>
-                                                                                                                </div>
-                                                    <h5 class="title">StockSage</h5>
-                                                    <span class="rainbow-demo-btn">Try It Now Free</span>
-                                                                                                            <span class="rainbow-badge-card ml--10">Hot</span>
-                                                                                                        </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                                                        <li>
-                                        <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                            <div class="inner">
-                                                <div class="left-align">
-                                                    <div class="img-bar">
-                                                                                                                    <i class="fa fa-microphone left-menu-category_icon"></i>
-                                                                                                                </div>
-                                                    <h5 class="title">Speech to Text</h5>
-                                                    <span class="rainbow-demo-btn">Try It Now Free</span>
-                                                                                                            <span class="rainbow-badge-card ml--10">Hot</span>
-                                                                                                        </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                                                        <li>
-                                        <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                            <div class="inner">
-                                                <div class="left-align">
-                                                    <div class="img-bar">
-                                                                                                                    <i class="far fa-comment-dots left-menu-category_icon"></i>
-                                                                                                                </div>
-                                                    <h5 class="title">Chat Bot</h5>
-                                                    <span class="rainbow-demo-btn">Try It Now Free</span>
-                                                                                                            <span class="rainbow-badge-card ml--10">Hot</span>
-                                                                                                        </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                                                        <li>
-                                        <a href="#" class="genarator-card bg-flashlight-static center-align">
-                                            <div class="inner">
-                                                <div class="left-align">
-                                                    <div class="img-bar">
-                                                                                                                    <i class="fa fa-envelope left-menu-category_icon"></i>
-                                                                                                                </div>
-                                                    <h5 class="title">Email Generator</h5>
-                                                    <span class="rainbow-demo-btn">Try It Now Free</span>
-                                                                                                    </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                                                </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Call TO Action Area  -->
-
-        <!-- Start Seperator Area  -->
-        <div class="chatenai-separator">
-            <img class="w-100 separator-dark" src="images/separator-top.svg" alt="separator">
-            <img class="w-100 separator-light" src="images/separator-top_1.svg" alt="separator">
-        </div>
-        <!-- End Seperator Area  -->
-
-        <!-- Start Accordion-2 Area  -->
-        <div class="rainbow-accordion-area rainbow-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                            <!-- <h4 class="subtitle "><span class="theme-gradient"></span></h4> -->
-                            <h2 class="title w-600 mb--20">Frequently Asked Questions</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row mt--35 row--20">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="rainbow-accordion-style  accordion">
-                            <div class="accordion" id="accordionExamplea">
-                                <div class="accordion-item card bg-flashlight">
-                                    <h2 class="accordion-header card-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            What Is AIChhain Generative Tool?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                            Experience a comprehensive suite of AI-powered solutions designed to
-                                            revolutionize
-                                            various creative and functional aspects. Unleash boundless creativity with
-                                            AI
-                                            content writing, effortlessly generating diverse content. Elevate visual
-                                            storytelling through an AI image generator, bringing concepts to life with
-                                            stunning
-                                            visuals. Simplify coding endeavors with an AI code generator, ensuring
-                                            precision and
-                                            efficiency. Engage seamlessly with audiences using AI chatbot interactions
-                                            tailored
-                                            to specific needs. Convert text to audio effortlessly and transcribe speech
-                                            to text
-                                            accurately, enabling a versatile range of content creation and communication
-                                            possibilities.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item card bg-flashlight">
-                                    <h2 class="accordion-header card-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            How Can I Make Generative AI Content for Next Project
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                            Creating generative AI content for your next project involves leveraging
-                                            cutting-edge
-                                            technology to generate diverse and innovative material. Begin by exploring
-                                            various
-                                            AIChhain tools tailored for content creation, such as text or image
-                                            generators.
-                                            Define the project's parameters, specifying themes, styles, or target
-                                            outputs to
-                                            guide the AI algorithms. Experiment with different platforms or software,
-                                            customizing inputs to prompt the AI to generate content aligned with your
-                                            project's
-                                            vision. Iterate and refine generated outputs, incorporating human creativity
-                                            and
-                                            oversight to ensure the final content meets your project's unique needs and
-                                            objectives.
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item card bg-flashlight">
-                                    <h2 class="accordion-header card-header" id="headingThree">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Is there a limitation on how much content I can generate?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                            No
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="accordion-item card bg-flashlight">
-                                    <h2 class="accordion-header card-header" id="headingFour">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                            What Languages does it supports
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                            Our <span>AIChhain</span> platform and tools often provide APIs or Bots that
-                                            support
-                                            integration with various programming languages. They commonly support
-                                            popular
-                                            languages like Python, JavaScript, Java, C#, Ruby, PHP, and others. Python
-                                            is
-                                            frequently a primary choice due to its versatility, robust libraries for AI,
-                                            and
-                                            ease of use in AI-related tasks. However, specific AI platforms might have
-                                            SDKs or
-                                            libraries designed for different languages to ensure developers can
-                                            integrate their
-                                            AI services across a broader range of applications and systems. Always check
-                                            the
-                                            documentation or resources provided by the AI platform to confirm the
-                                            supported
-                                            programming languages for integration.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item card bg-flashlight">
-                                    <h2 class="accordion-header card-header" id="headingFive">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                            What is SEO Writing AI and how do I use it?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                            SEO Writing AI refers to artificial intelligence-driven tools designed to
-                                            optimize
-                                            content for search engines. These tools analyze various factors that impact
-                                            search
-                                            engine rankings and provide suggestions or guidance to improve content
-                                            visibility
-                                            and relevance. To use SEO Writing AI effectively, start by selecting a
-                                            reliable
-                                            AI-powered platform tailored for SEO writing. Input your content or topic,
-                                            and the
-                                            AI will analyze it for factors like keyword usage, readability, structure,
-                                            and
-                                            relevance. Utilize the insights and suggestions provided by the tool to
-                                            refine your
-                                            content, ensuring it aligns with SEO best practices. This involves
-                                            incorporating
-                                            relevant keywords, enhancing readability, structuring content effectively,
-                                            and
-                                            tailoring it to meet the needs of your target audience. Regularly assess and
-                                            refine
-                                            your content based on the AI-generated recommendations to enhance its search
-                                            engine
-                                            visibility and impact.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item card bg-flashlight">
-                                    <h2 class="accordion-header card-header" id="headingSix">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                            Is it helpful for Digital Marketer or Content Writer?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExamplea">
-                                        <div class="accordion-body card-body">
-                                            AI can be immensely beneficial for both digital marketers and content
-                                            writers. It
-                                            simplifies the process of optimizing content for search engines, aiding in
-                                            better
-                                            visibility and ranking on search engine results pages (SERPs). For digital
-                                            marketers, it streamlines the SEO process, providing insights and
-                                            recommendations to
-                                            enhance content strategy and improve online visibility. Content writers
-                                            benefit from
-                                            AI-generated suggestions that improve the quality, relevance, and
-                                            searchability of
-                                            their content, ensuring it resonates effectively with the target audience
-                                            while
-                                            meeting SEO criteria. Ultimately, this tool supports both professionals in
-                                            creating
-                                            compelling, search-friendly content that drives traffic and engagement.
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Accordion-2 Area  -->
-
-
-        <footer class="main-footer">
-    <div class="main-footer__shape-1 img-bounce"></div>
-    <div class="main-footer__top">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                    <div class="footer-widget__column footer-widget__about">
-                        <div class="footer-widget__logo">
-                            <a href="index.html"><img src="https://ai-pin.io/images/resource/footer-logo-1.png" alt=""></a>
-                        </div>
-                        <p class="footer-widget__about-text">Your Gateway to Endless Creativity
-                            and Simplified Solutions in Generative AI</p>
-                        <br><br>
-                        For the latest update: <b><a href="#">Subscribe Here</a></b>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
-                    <div class="footer-widget__column footer-widget__resources">
-                        <div class="footer-widget__title-box">
-                            <h3 class="footer-widget__title">Resources</h3>
-                        </div>
-                        <div class="footer-widget__resources-list-box">
-                            <ul class="footer-widget__resources-list">
-                                <li><a href="#">AI Content Writing</a></li>
-                                <li><a href="#">AI Image Generator</a></li>
-                                <li><a href="#">AI Bots</a></li>
-                                <li><a href="#">Speech to Text</a></li>
-                                <li><a href="#">Generate Text to Audio</a></li>
-                                <li><a href="#">AI Code Generator</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <div class="footer-widget__column footer-widget__newsletter">
-                        <div class="footer-widget__title-box">
-                            <h3 class="footer-widget__title">Social</h3>
-                        </div>
-                        <div class="site-footer__social">
-                            <a href="#" target="_blank">
-                                <img src="images/youtube.svg" class="social-icon">
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="images/tiktok.svg" class="social-icon">
-                            </a>
-                            <a href="https://t.me/aichhainofficial" target="_blank">
-                                <img src="images/telegram.svg" class="social-icon">
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="images/instagram.svg" class="social-icon">
-                            </a>
-                            <a href="https://x.com/Aichhain25" target="_blank">
-                                <img src="images/x-platform.svg" class="social-icon">
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="images/m1.svg" class="social-icon">
-                            </a>
-                            <a href="#" target="_blank">
-                                <img src="images/globe.svg" class="social-icon">
-                            </a>
-                        </div>
-                        <div>Office: 555 Republic Drive, Suite 200, Plano, TX 75074</div>
-
-                        <div class="footer-widget__title-box" style="margin-top:20px;">
-                            <h5 style="color:#fff">Legal disclaimer:</h5>
-                        </div>
-                        <div class="site-footer__social">                        
-                            <p style="font-size:12px;">Our token is a utility token designed for use within our ecosystem and is not an investment. There are no guarantees of profit or value appreciation. Please conduct your own research and understand the risks before participating.</p>
-                        </div>
-                    </div>
-                </div>
-               
-                <br><br>
-                <hr>
-                <div class="footer-widget__title-box" style="text-align: center;">
-                    <h3 class="footer-widget__title">Token Contract</h3>
-                    <p>
-                        <a href="https://solscan.io/token/7ey8VBSgpjiiu1HZS8uV8ofmaM2FScAPtfkpZ1xThczm">7ey8VBSgpjiiu1HZS8uV8ofmaM2FScAPtfkpZ1xThczm</a>
-                    </p>
-                    <br>
-                    <hr>
-                    <p>USA | Switzerland | India | South Africa</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="main-footer__bottom">
-        <div class="container">
-            <div class="main-footer__bottom-inner">
-                <p class="main-footer__bottom-text">Copyright © 2025. All Rights Reserved.</p>
-            </div>
-        </div>
-    </div>
-</footer>        <div class="rn-progress-parent rn-backto-top-active">
-            <svg class="rn-back-circle svg-inner" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 246.547;">
-                </path>
-            </svg>
-        </div>
-    </main>
-    <!-- All Scripts  -->
-
-    <!-- JS
-    ============================================ -->
-    <script>
-    var base_url = "https://ai-pin.io/";
-    var base_url_dashboard = "https://chat.ai-pin.io/";
+<div class="mt-16 flex justify-center sm:justify-start">
+<div class="w-10 h-10 flex items-center justify-center border border-white/20 rounded-full animate-bounce">
+<i class="ri-arrow-down-line"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Grid -->
+<section class="py-20 grid-pattern">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="heading text-3xl md:text-4xl font-bold mb-4">Revolutionary AI Features</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Our platform combines cutting-edge AI technology with the security and transparency of Solana blockchain.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="feature-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/20 rounded-lg mb-6">
+<i class="ri-brain-line text-3xl text-primary"></i>
+</div>
+<h3 class="heading text-xl font-bold mb-3">Neural Network Training</h3>
+<p class="text-gray-300">
+Train AI models on decentralized infrastructure with enhanced privacy and data ownership. Access computational resources from the network.
+</p>
+</div>
+<!-- Feature 2 -->
+<div class="feature-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/20 rounded-lg mb-6">
+<i class="ri-lock-line text-3xl text-primary"></i>
+</div>
+<h3 class="heading text-xl font-bold mb-3">Secure Model Marketplace</h3>
+<p class="text-gray-300">
+Buy, sell, and share AI models with verifiable ownership and transparent transaction history on the Solana blockchain.
+</p>
+</div>
+<!-- Feature 3 -->
+<div class="feature-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/20 rounded-lg mb-6">
+<i class="ri-token-line text-3xl text-primary"></i>
+</div>
+<h3 class="heading text-xl font-bold mb-3">Tokenized Computation</h3>
+<p class="text-gray-300">
+Pay for AI processing with our native token. Earn rewards by contributing computational resources to the network.
+</p>
+</div>
+<!-- Feature 4 -->
+<div class="feature-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/20 rounded-lg mb-6">
+<i class="ri-code-box-line text-3xl text-primary"></i>
+</div>
+<h3 class="heading text-xl font-bold mb-3">Developer SDK</h3>
+<p class="text-gray-300">
+Comprehensive tools and APIs for integrating AI capabilities into your applications with minimal blockchain knowledge required.
+</p>
+</div>
+<!-- Feature 5 -->
+<div class="feature-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/20 rounded-lg mb-6">
+<i class="ri-group-line text-3xl text-primary"></i>
+</div>
+<h3 class="heading text-xl font-bold mb-3">DAO Governance</h3>
+<p class="text-gray-300">
+Community-driven decision making for platform development, feature prioritization, and resource allocation through on-chain voting.
+</p>
+</div>
+<!-- Feature 6 -->
+<div class="feature-card bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-8 rounded-lg">
+<div class="w-16 h-16 flex items-center justify-center bg-primary/20 rounded-lg mb-6">
+<i class="ri-shield-check-line text-3xl text-primary"></i>
+</div>
+<h3 class="heading text-xl font-bold mb-3">Privacy-Preserving AI</h3>
+<p class="text-gray-300">
+Run AI models on encrypted data without exposing sensitive information, powered by zero-knowledge proofs and secure multi-party computation.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology Stack -->
+<section class="py-20 bg-gray-900">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="heading text-3xl md:text-4xl font-bold mb-4">Powered by Advanced Technology</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Our platform leverages cutting-edge technologies to deliver powerful, secure, and scalable AI solutions.
+</p>
+</div>
+<div class="relative overflow-hidden mb-16">
+<div class="flex tech-scroll space-x-16 py-8">
+<div class="flex space-x-16 items-center">
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-solana-fill text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Solana</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-tensorflow-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">TensorFlow</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-python-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Python</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-rust-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Rust</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-database-2-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">IPFS</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-cloud-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Arweave</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-reactjs-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">React</span>
+</div>
+</div>
+<!-- Duplicate for infinite scroll -->
+<div class="flex space-x-16 items-center">
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-solana-fill text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Solana</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-tensorflow-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">TensorFlow</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-python-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Python</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-rust-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Rust</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-database-2-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">IPFS</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-cloud-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">Arweave</span>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-24 h-24 flex items-center justify-center bg-white/10 rounded-full mb-3">
+<i class="ri-reactjs-line text-5xl text-primary"></i>
+</div>
+<span class="text-gray-300">React</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg p-8">
+<h3 class="heading text-2xl font-bold mb-6 text-center">Integration Architecture</h3>
+<div class="relative h-96 overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=futuristic%20technology%20integration%20diagram%20showing%20AI%20and%20blockchain%20connection%2C%20cyberpunk%20style%20with%20glowing%20neon%20blue%20and%20purple%20connections%20between%20nodes%2C%20high-tech%20network%20visualization%20with%20clean%20modern%20design%2C%20perfect%20for%20tech%20website%2C%20dark%20background%20with%20grid%20pattern&width=1200&height=600&seq=2&orientation=landscape" alt="Integration Architecture" class="w-full h-full object-cover object-top">
+</div>
+</div>
+</div>
+</section>
+<!-- Product Showcase -->
+<section class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="heading text-3xl md:text-4xl font-bold mb-4">Our Products</h2>
+<p class="text-xl text-gray-300 max-w-3xl mx-auto">
+Explore our suite of decentralized AI solutions built on Solana blockchain
+</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=futuristic%20AI%20model%20marketplace%20interface%20with%20glowing%20blue%20elements%2C%20cyberpunk%20style%2C%20showing%20various%20AI%20models%20for%20sale%20with%20price%20tags%20and%20ratings%2C%20dark%20theme%20with%20neon%20accents%2C%20high-tech%20visualization&width=600&height=400&seq=3&orientation=landscape" alt="AI Marketplace" class="w-full h-full object-cover object-top transition-transform hover:scale-105 duration-500">
+</div>
+<div class="p-6">
+<h3 class="heading text-xl font-bold mb-2">AI Marketplace</h3>
+<p class="text-gray-300 mb-4">
+Buy, sell, and trade AI models with secure ownership verification and transparent transaction history.
+</p>
+<div class="flex justify-between items-center">
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Learn More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<div class="text-gray-400 text-sm">
+<span class="font-medium">2,453</span> Models Available
+</div>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=futuristic%20decentralized%20computing%20dashboard%20with%20nodes%20visualization%2C%20cyberpunk%20style%20with%20purple%20and%20blue%20elements%2C%20showing%20computational%20resources%20being%20shared%20across%20a%20network%2C%20high-tech%20UI%20with%20data%20metrics%20and%20performance%20graphs&width=600&height=400&seq=4&orientation=landscape" alt="Compute Network" class="w-full h-full object-cover object-top transition-transform hover:scale-105 duration-500">
+</div>
+<div class="p-6">
+<h3 class="heading text-xl font-bold mb-2">Compute Network</h3>
+<p class="text-gray-300 mb-4">
+Decentralized computing resources for AI model training and inference with pay-per-use tokenomics.
+</p>
+<div class="flex justify-between items-center">
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Learn More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<div class="text-gray-400 text-sm">
+<span class="font-medium">14.2K</span> Active Nodes
+</div>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-lg overflow-hidden">
+<div class="h-64 overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=futuristic%20developer%20SDK%20interface%20with%20code%20editor%20and%20AI%20integration%20tools%2C%20cyberpunk%20style%20with%20blue%20and%20purple%20elements%2C%20showing%20API%20documentation%20and%20code%20examples%2C%20dark%20theme%20with%20neon%20accents%2C%20high-tech%20programming%20environment&width=600&height=400&seq=5&orientation=landscape" alt="Developer SDK" class="w-full h-full object-cover object-top transition-transform hover:scale-105 duration-500">
+</div>
+<div class="p-6">
+<h3 class="heading text-xl font-bold mb-2">Developer SDK</h3>
+<p class="text-gray-300 mb-4">
+Comprehensive toolkit for integrating decentralized AI capabilities into your applications.
+</p>
+<div class="flex justify-between items-center">
+<a href="#" class="text-primary hover:text-primary/80 flex items-center">
+Learn More
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+<div class="text-gray-400 text-sm">
+<span class="font-medium">8,729</span> Developers
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="bg-gray-800 border border-gray-700 text-white px-8 py-3 !rounded-button font-medium hover:bg-gray-700 transition-colors whitespace-nowrap">
+View All Products
+</button>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-20 bg-gradient-to-r from-[#2A0944] to-[#0F172A]">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="heading text-3xl md:text-4xl font-bold mb-6">Ready to Join the AI Revolution?</h2>
+<p class="text-xl text-gray-300 mb-10">
+Get early access to our platform and be part of the future of decentralized AI. Connect your wallet or join our community today.
+</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+<button class="bg-primary text-white px-8 py-3 !rounded-button neon-glow font-medium text-lg whitespace-nowrap">
+Connect Wallet
+</button>
+<button class="bg-white/10 backdrop-blur-sm text-white px-8 py-3 !rounded-button font-medium text-lg hover:bg-white/20 transition-colors whitespace-nowrap">
+Join Discord
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-2">45K+</div>
+<div class="text-gray-400">Community Members</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-2">$12M</div>
+<div class="text-gray-400">Total Value Locked</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-2">2.5K</div>
+<div class="text-gray-400">AI Models Deployed</div>
+</div>
+<div class="text-center">
+<div class="text-3xl font-bold gradient-text mb-2">18</div>
+<div class="text-gray-400">Global Partners</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<h1 class="text-2xl font-['Pacifico'] text-white mb-6">Aichhain</h1>
+<p class="text-gray-400 mb-6">
+Decentralized AI solutions powered by Solana blockchain. Revolutionizing how we build, deploy, and monetize artificial intelligence.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-twitter-x-line text-gray-300"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-discord-line text-gray-300"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-github-line text-gray-300"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary/20 transition-colors">
+<i class="ri-telegram-line text-gray-300"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-white mb-6">Products</h3>
+<ul class="space-y-3">
+<li><a href="https://readdy.ai/home/dab0cdc7-19a5-4d77-9b11-dbd56c687144/782097ff-9b91-40b0-80df-f4dedd9a8d75" data-readdy="true" class="text-gray-400 hover:text-primary transition-colors">AI Marketplace</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Compute Network</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Developer SDK</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Governance</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Token</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-white mb-6">Resources</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Documentation</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Whitepaper</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">GitHub</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Careers</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-white mb-6">Subscribe</h3>
+<p class="text-gray-400 mb-4">
+Stay updated with the latest news and announcements from Aichhain.
+</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email address" class="bg-gray-800 text-gray-300 px-4 py-2 !rounded-l-button border-none flex-grow focus:outline-none focus:ring-2 focus:ring-primary">
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+<div class="flex items-center space-x-4">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-visa-fill text-2xl text-gray-400"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-mastercard-fill text-2xl text-gray-400"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-paypal-fill text-2xl text-gray-400"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-apple-fill text-2xl text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 mt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="text-gray-500 mb-4 md:mb-0">
+© 2025 Aichhain. All rights reserved.
+</div>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-gray-300 transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-gray-300 transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-gray-300 transition-colors">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="mobileMenuToggle">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+// Toggle icon between menu and close
+const icon = mobileMenuButton.querySelector('i');
+if (icon.classList.contains('ri-menu-line')) {
+icon.classList.remove('ri-menu-line');
+icon.classList.add('ri-close-line');
+} else {
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+}
+});
+});
 </script>
-<!-- JS
-============================================ -->
-<script src="js/modernizr.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/waypoint.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/counterup.min.js"></script>
-<script src="js/feather.min.js"></script>
-<script src="js/sal.min.js"></script>
-<script src="js/masonry.js"></script>
-<script src="js/imageloaded.js"></script>
-<script src="js/magnify.min.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/easypie.js"></script>
-<script src="js/text-type.js"></script>
-<script src="js/prism.js"></script>
-<script src="js/jquery.style.swicher.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
-<script src="js/backto-top.js"></script>
-
-<script src="js/js.cookie.js"></script>
-<script src="js/jquery-one-page-nav.js"></script>
-<!-- Main JS -->
-<script src="js/main.js"></script>
-<script src="js/metamask.js"></script>
-    <script>
-
-        $("#credit_points").on('change keyup', function () {
-            var credit_points = $(this).val();
-            console.log(credit_points);
-            var min_credit_points = '';
-
-            if (credit_points != '') {
-                var dollar_amount = $("#dollar_amount").val();
-                var calculated_dollar_amount = credit_points * dollar_amount;
-
-                if (parseFloat(calculated_dollar_amount) < 10) {
-                    $("#btn_purchase").hide();
-                    $("#credit_points_err").show();
-
-                    $("#custom_plan_price").val(calculated_dollar_amount);
-                    $("#custom_plan_price_html").html('<span class="currency">$</span><span class="price">' + calculated_dollar_amount.toFixed(2) + '</span>')
-                    $("#hidden_credit_count").val(credit_points);
-                } else {
-                    $("#btn_purchase").show();
-                    $("#credit_points_err").hide();
-
-                    $("#custom_plan_price").val(calculated_dollar_amount);
-                    $("#custom_plan_price_html").html('<span class="currency">$</span><span class="price">' + calculated_dollar_amount.toFixed(2) + '</span>')
-                    $("#hidden_credit_count").val(credit_points);
-                }
-            } else {
-                $("#custom_plan_price").val(0);
-                $("#custom_plan_price_html").html('<span class="currency">$</span><span class="price">0.00</span>');
-                $("#hidden_credit_count").val(min_credit_points);
-
-                $("#btn_purchase").hide();
-                $("#credit_points_err").show();
-            }
-        })
-
-
-        // Your slide data (modify as needed)
-        const slideData = [{
-            link: "https://www.businessdailyswitzerland.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/daily-switzerland.svg",
-            alt: "Daily Switzerland"
-        },
-        {
-            link: "https://apnews.com/press-release/ein-presswire-newsmatics/artificial-intelligence-f34d763d9091a06e7cfbc9b46a71d5c4",
-            image: base_url + "assets/images/news/aplogo.svg",
-            alt: "AP News"
-        },
-        {
-            link: "https://www.blockchainnewsonline.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/blockchain.svg",
-            alt: "Blockchain News"
-        },
-        {
-            link: "https://www.abc4.com/business/press-releases/ein-presswire/676246824/ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration/",
-            image: base_url + "assets/images/news/abc4.jpg",
-            alt: "ABC4 News"
-        },
-        {
-            link: "https://www.economicdigestofeurope.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/economic-digest.svg",
-            alt: "Economic Digest Europe"
-        },
-        {
-            link: "https://fox2now.com/business/press-releases/ein-presswire/676246824/ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration/",
-            image: base_url + "assets/images/news/fox2.jpg",
-            alt: "Fox2Now News"
-        },
-        {
-            link: "https://www.cryptocurrencyinsidertoday.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/cryptocurrency.svg",
-            alt: "Cryptocurrency Insider"
-        },
-        {
-            link: "https://world.einnews.com/pr_news/switzerland/676246824/ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/newswire.jpg",
-            alt: "Nbc9 News"
-        },
-        {
-            link: "https://www.themarcomjournal.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/marcom.svg",
-            alt: "The MarCom Journal"
-        },
-        {
-            link: "https://www.cybercurrencynewscenter.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/cybercurrency.svg",
-            alt: "Cybercurrency"
-        },
-        {
-            link: "https://www.europeanglobaltimes.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/european.svg",
-            alt: "European Global Times"
-        },
-        {
-            link: "https://www.smallbusinessesinthenews.com/article/676246824-ai-pin-collaborates-with-industry-leaders-to-redefine-user-experiences-through-ai-integration",
-            image: base_url + "assets/images/news/small-businesses.svg",
-            alt: "Small Businesses"
-        }
-        ];
-
-
-        // Loop through the slideData and create anchor elements with img children
-        slideData.forEach(data => {
-            $("#imageWrapper").append('<li class="box"><a href="' + data.link + '" target="_blank"><img src="' + data.image + '" alt="' + data.alt + '"></a></li>')
-        });
-
-
-        // Your slide data (modify as needed)
-        const slideData1 = [{
-            link: "https://app.uniswap.org/swap?outputCurrency=0xbc544207ff1c5b2bc47a35f745010b603b97e99e&use=V3",
-            image: base_url + "assets/images/ex/uniswap-logo.png",
-            alt: "UniSwap"
-        },
-        {
-            link: "https://www.dextools.io/app/en/ether/pair-explorer/0x5d9f6255f85f28e97c5e4acebddb665877bbd168",
-            image: base_url + "assets/images/ex/dextools-logo.png",
-            alt: "DexTools"
-        },
-        {
-            link: "https://coinmarketcap.com/currencies/ai-pin/",
-            image: base_url + "assets/images/ex/cmc-logo.png",
-            alt: "CoinMarketCap"
-        },
-        {
-            link: "https://www.coingecko.com/en/coins/",
-            image: base_url + "assets/images/ex/coingecko-logo.png",
-            alt: "Coingecko"
-        },
-        {
-            link: "https://www.coinbase.com/price/",
-            image: base_url + "assets/images/ex/coinbase-logo.png",
-            alt: "Coinbase"
-        },
-        {
-            link: "https://www.binance.com/en/price/",
-            image: base_url + "assets/images/ex/binance.png",
-            alt: "Binance"
-        },
-        {
-            link: "https://www.okx.com/price/",
-            image: base_url + "assets/images/ex/okx.png",
-            alt: "OKX"
-        },
-        {
-            link: "https://www.bybit.com/en/coin-price/",
-            image: base_url + "assets/images/ex/bybit-logo.png",
-            alt: "ByBit"
-        }
-        ];
-
-        // Loop through the slideData1 and create anchor elements with img children
-        slideData1.forEach(data => {
-            $("#imageWrapper1").append('<li class="box"><a href="' + data.link + '" target="_blank"><img src="' + data.image + '" alt="' + data.alt + '"></a></li>
+<script id="languageDropdownToggle">
+document.addEventListener('DOMContentLoaded', function() {
+const languageSelector = document.getElementById('languageSelector');
+const languageDropdown = document.getElementById('languageDropdown');
+if (languageSelector && languageDropdown) {
+languageSelector.addEventListener('click', function(e) {
+e.stopPropagation();
+languageDropdown.classList.toggle('hidden');
+});
+document.addEventListener('click', function(e) {
+if (!languageSelector.contains(e.target)) {
+languageDropdown.classList.add('hidden');
+}
+});
+}
+});
+</script>
+<script id="themeToggleScript">
+document.addEventListener('DOMContentLoaded', function() {
+const themeToggle = document.getElementById('themeToggle');
+// Theme is dark by default, so we don't need to set it initially
+themeToggle.addEventListener('change', function() {
+// This is just a placeholder for theme toggle functionality
+// In a real implementation, you would switch between dark and light themes
+console.log('Theme toggle clicked. Current state:', themeToggle.checked);
+});
+});
+</script>
+</body>
+</html>
